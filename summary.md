@@ -84,13 +84,14 @@
 >
 > a = c;                재할당 o
 > ```
-> **var** : (재선언 가능, 재할당 가능)
+> **var** : 잘 사용하지 않는다(재선언 가능, 재할당 가능)
 > ```js
 > var a = b;
 > var a = c;            재선언 o
 > 
 > a = d;                재할당 o
 > ```
+> 가능한 const, 가끔 let, 최대한 사용하지 않음 var
 
 ### Array(배열)
 > 리스트와 비슷한 객체로서 순회와 변형 작업을 수행하는 매서드를 갖음<br>
@@ -174,5 +175,25 @@
 > 
 > 출력 : 2ee
 >        Hello! Seo nice to meet you!
+
+### Return
+> 함수 실행을 종료하고, 주어진 값을 함수 호출 지점으로 반환<br>
+> console.log는 consloe에 무언가를 log하는 것<br>
+> console화면이 아닌 데이터를 받아 사용하거나 화면에 결과를 출력하기 위해 returns 사용
+> ```js
+> const calculator = {
+>   plus: function(a, b){
+>     return a + b;
+>   },
+>   minus: function(a, b){
+>     return a - b;
+>   },
+> };
+> 
+> const pluseResult = calculator.plus(2, 3);
+> console.log(pluseResult);
+> 
+> 출력 : 5
+>        
 ---
 # 3
