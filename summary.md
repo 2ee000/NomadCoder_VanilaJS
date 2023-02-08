@@ -149,6 +149,7 @@
 > 
 > 입력 : sayHello();
 > 출력 : "Hello!"
+> ```
 > function의 괄호 안의 매개변수에서 argument를 받을 수 있음<br>
 > 또한 argument는 하나만 받을 수 있는것이 아니고 여러개도 받을 수 있음
 > ```js
