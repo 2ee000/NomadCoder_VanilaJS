@@ -194,6 +194,8 @@
 > console.log(pluseResult);
 > 
 > 출력 : 5
->        
+
+### console.log
+> 콘솔에 결과를 보여주기 위한 것
 ---
 # 3
