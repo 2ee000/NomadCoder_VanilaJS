@@ -176,10 +176,15 @@
 > 출력 : 2ee
 >        Hello! Seo nice to meet you!
 
+### console.log
+> 콘솔에 결과를 보여주기 위한 것
+
 ### Return
 > 함수 실행을 종료하고, 주어진 값을 함수 호출 지점으로 반환<br>
-> console.log는 consloe에 무언가를 log하는 것<br>
-> console화면이 아닌 데이터를 받아 사용하거나 화면에 결과를 출력하기 위해 returns 사용
+> console화면이 아닌 데이터를 받아 사용하거나 화면에 결과를 출력하기 위해 returns 사용<br>
+> variable에 function을 할당하면 variable은 function의 return value를 가지게 됨<br>
+> **한번 return하면 function은 끝나게됨**
+> function은 계속 남아있는것이 아니고 실행되고나면 사라지고, 마지막에 결과를 남김
 > ```js
 > const calculator = {
 >   plus: function(a, b){
@@ -195,7 +200,69 @@
 > 
 > 출력 : 5
 
-### console.log
-> 콘솔에 결과를 보여주기 위한 것
+### prompt(message, default)
+> 사용자에게 창을 띄워 값을 받음<br>
+> message의 기본값은 string(숫자를 입력해도 string이라고 뜸)<br>
+> prompt();를 사용하면 답을 할 때까지 JavaScript 코드의 실행을 멈춤(매우 오래된 방법)<br>
+> 잘 사용하지 않음(message가 이쁘지 않음, CSS적용 불가)
+
+### typeof
+> variable(변수)의 type을 보는 방법
+
+### parseInt()
+> string을 number로 변환<br>
+> 숫자가 아닐 경우 변환이 안됨(NaN : not a number)
+
+### inNaN()
+> 하나의 argument(인자)를 주면 number인지 아닌지 알려줌(boolean을 반환함)<br>
+> 숫자 입력 : false<br>
+> 문자 입력 : true
+
+### Conditional(조건문)
+> condition은 boolean으로 판별 가능해야함
+> ```js
+> if(조건) {
+>   조건이 참일 때 실행코드
+> }
+> else {
+>   조건이 거짓일 때 실행코드
+> }
+> ```
+> if, else if, else
+> ```js
+> if(조건1) {
+>   조건1이 참일 때 실행코드
+> }
+> else if(조건2) {
+>   조건1이 거짓이고 조건2가 참일 때 실행코드
+> }
+> else {
+>   조건1, 2 둘 다 만족하지 않을 때 실행코드
+> }
+> ```
+> || : (also) 또는의 의미로 하나라도 true면 true반환, 모두 false일 때 false반환
+> ```js
+> true || true = true
+> false || true = true
+> true || false = true
+> false || false = false
+> ```
+> && : (and) 그리고의 의미로 모두 true여야 true반환, 하나라도 false면 false반환
+> ```js
+> true && true = true
+> false && true = false
+> true && false = false
+> false && false = false
+> ```
+> ==, ===, !=, <, <=, >, >=
+> ```js
+> == : 같다(값을 비교, binaryCode로 구분)
+> === : 같다(값과 유형을 비교)
+> != or !==: 다르다
+> a < b : a는 b보다 작다
+> a <= b : a는 b보다 작거나 같다
+> a > b : a는 b보다 크다
+> a >= b : a는 b보다 크거나 같다
+> ```
 ---
 # 3
