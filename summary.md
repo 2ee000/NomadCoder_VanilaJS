@@ -304,7 +304,7 @@
 > document.getElementsByTagName("태그");
 > ```
 > **querySelector** : element를 CSS 방식으로 검색<br>
-> 　　　　　　  단 하나의 element를 return(여러개가 있을 경우 첫 번째 element만 가져옴)
+> 　　　　　　  단 하나의 element를 return(여러개가 있을 경우 첫 번째 element만 가져옴)<br>
 > 　　　　　　  querySelector == getElementById
 > ```js
 > document.querySelector("");
