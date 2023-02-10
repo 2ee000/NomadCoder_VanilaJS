@@ -14,6 +14,7 @@
 > 브라우저에 내장되어있어 따로 설치 필요없음<br>
 > 모든 브라우저에 내장되어있음<br>
 > **Front-end 개발자가 사용할 수 있는 유일한 프로그래밍 언어**(Back-end에서도 사용 가능)<br>
+> HTML의 Element들을 JavaSCript를 통해 변경하고, 읽을 수 있음<br>
 > 실시간, 3D, 머신러닝 등 여러 분야에서 사용 가능<br>
 > 기술을 좀 더 가다듬어 깊게 배우고 싶다면 FrameWork
 
@@ -265,4 +266,57 @@
 > a >= b : a는 b보다 크거나 같다
 > ```
 ---
-# 3
+# 3 JAVASCRIPT ON THE BROWSER
+### JavaScript
+> HTML과 연결되어있음<br>
+> HTML element를 가지고 오지만, HTML 자체를 보여주지는 않음(object를 보여줌)<br>
+> JavaScript에서 HTML을 읽어올 뿐만 아니라, HTML을 변경 및 추가할 수 있음
+
+### Document
+> 브라우저에 존재하는 object<br>
+> 접근할 수 있는 HTML을 가리키는 객체<br>
+> JavaScript의 관점으로 HTML을 보여줌
+> ```js
+> 입력 : document.title;
+> 출력 : <title>제목</title>에 입력한 내용
+> ```
+> getElementById : id로 element를 찾음(잘 사용하지않음)
+> ```js
+> 입력 : document.getElementById("아이디");
+> 출력 : <h1 id="아이디">내용</h1>
+> ```
+> getElementsByClassName : class로 element를 찾음(array)
+> ```js
+> 입력 : document.getElementsByClassName("클래스");
+> 출력 : HTMLCollection('클래스'를 가진 element 개수) [종류.클래스, 종류.클래스]
+>        0: 종류.클래스
+>        1: 종류.클래스
+>        
+> ex. HTMLCollection(3) [h1.title, h1.title, h1.title]
+>     ▶ 0: h1.title
+>     ▶ 1: h1.title
+>     ▶ 2: h1.title
+>      length: 3
+>     ▶ [[Prototype]]: HTMLCollection
+> ```
+> getElementsByTagName : tag로 element를 찾음(array)
+> ```js
+> document.getElementsByTagName("태그");
+> ```
+> **querySelector** : element를 CSS 방식으로 검색<br>
+> 　　　　　　  단 하나의 element를 return(여러개가 있을 경우 첫 번째 element만 가져옴)
+> 　　　　　　  querySelector == getElementById
+> ```js
+> document.querySelector("");
+> 
+> ex.html
+>    <div class="디브">
+>       <h1>내용</h1>
+>    </div>
+> ex.js
+>    입력 : document.querySelector(".디브 h1");
+>    출력 : <h1>내용</h1>
+> ```
+> querySelectorAll : elemet를 CSS 방식으로 검색<br>
+> 　　　　　　　　 querySelector과 다르게 selector 안의 조건에 부합하는 모든 element를 가져옴
+### 
