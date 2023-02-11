@@ -180,6 +180,9 @@
 ### console.log
 > 콘솔에 결과를 보여주기 위한 것
 
+### console.dir
+> element 내부를 보여주기 위한 것
+
 ### Return
 > 함수 실행을 종료하고, 주어진 값을 함수 호출 지점으로 반환<br>
 > console화면이 아닌 데이터를 받아 사용하거나 화면에 결과를 출력하기 위해 returns 사용<br>
@@ -319,4 +322,27 @@
 > ```
 > querySelectorAll : elemet를 CSS 방식으로 검색<br>
 > 　　　　　　　　 querySelector과 다르게 selector 안의 조건에 부합하는 모든 element를 가져옴
-### 
+
+### Event
+> 어떤 행위를 하는 것을 뜻함(모든 event는 js가 listen할 수 있음)<br>
+> eventListener : event를 listen(js에게 무슨event를 listen하고싶은지 알려줘야함)
+> ```js
+> ex.
+> const title = document.querySelector("div.hello:first-child h1");
+> function handleTitleClick() {
+>   title.style.color = "blue";
+> }
+> title.addEventListener("click", handleTitleClick);
+> //여기에서 handleTitleClick()을 사용하면 클릭을 하지 않아도 파란색으로 변함
+> 
+> // click하면 handleTitleClick이라는 function이 동작하길 원함
+> // 그래서 handleTitleClick 함수에 ()를 넣지 않은것
+> // 즉, js가 대신 실행시켜주길 바라는것!
+> 
+> function이 js에게 넘겨주고 유저가 title을 click할 경우 js가 실행버튼을 대신 눌러주길 바라는것<br>
+> (직접 handleTitleClick(); 하는 것이 아님)<br>
+> 함수에서 ()이 두 괄호를 추가함으로써 실행버튼을 누를 수 있는것
+> ```
+> 찾고싶은 element이름 + mdn 구글 검색 : listen하고싶은 event를 찾는 방법(ex. h1 html element mdn)<br>
+> 　　　　　　　　　　　　　　 　　　　JavaScript의 element를 원하기 때문에 링크에 'Web APIs' 문장이<br>
+> 　　　　　　　　　　　　　　 　　　　포함된 페이지를 찾음(js관점의 HTML Heading Element란 의미)
