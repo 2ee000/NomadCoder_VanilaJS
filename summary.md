@@ -344,7 +344,7 @@
 > 함수에서 ()이 두 괄호를 추가함으로써 실행버튼을 누를 수 있는것
 > ```
 > 사용 가능한 element : console.dir을 통해 element출력 → property 이름 앞에 on이 붙어있다면 event listener<br>
-> 　　　　 　　　　　  사용할 땐 on을 제외한 이름 사용(onabort대신 abort사용)
+> 　　　　 　　　　　  사용할 땐 on을 제외한 이름 사용(onabort대신 abort사용)<br>
 > 찾고싶은 element이름 + mdn 구글 검색 : listen하고싶은 event를 찾는 방법(ex. h1 html element mdn)<br>
 > 　　　　　　　　　　　　　　 　　　　JavaScript의 element를 원하기 때문에 링크에 'Web APIs' 문장이<br>
 > 　　　　　　　　　　　　　　 　　　　포함된 페이지를 찾음(js관점의 HTML Heading Element란 의미)
