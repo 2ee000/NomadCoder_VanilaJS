@@ -325,7 +325,8 @@
 
 ### Event
 > 어떤 행위를 하는 것을 뜻함(모든 event는 js가 listen할 수 있음)<br>
-> eventListener : event를 listen(js에게 무슨event를 listen하고싶은지 알려줘야함)
+> eventListener : event를 listen(js에게 무슨event를 listen하고싶은지 알려줘야함)<br>
+> addEventListener() : event들을 listen할 수 있음
 > ```js
 > ex.
 > const title = document.querySelector("div.hello:first-child h1");
@@ -348,3 +349,47 @@
 > 찾고싶은 element이름 + mdn 구글 검색 : listen하고싶은 event를 찾는 방법(ex. h1 html element mdn)<br>
 > 　　　　　　　　　　　　　　 　　　　JavaScript의 element를 원하기 때문에 링크에 'Web APIs' 문장이<br>
 > 　　　　　　　　　　　　　　 　　　　포함된 페이지를 찾음(js관점의 HTML Heading Element란 의미)
+> ```js
+> title.onclick = handleMouseEnter;
+> title.addEventListener("mouseenter", handleMouseEnter);
+> 위 두 코드는 동일하나 addEventListener을 선호하는 이유는
+> removeEventListener을 통해 event listener을 제거할 수 있기 때문
+> ```
+> document가 JavaScript에서 기본적으로 제공되듯이 window도 기본적으로 제공<br>
+> document의 head, title, body는 중요하기때문에 document.body.style~은 허용이 되지만<br>
+> h1, div 등은 호출이 안돼 querySelector이나 getElementByID로 호출해야함
+
+### CSS in JavaScript
+> style에 적합한 도구는 CSS, animation에 적합한 도구는 JavaScript
+> currentColor : getter로써, 최근 color값을 복사하는 역할(const로 선언하는 것이 적절)<br>
+> newColor : setter로써, 변수에 대입된 색상값을 h1.style.color에 최종적응로 할당하는 역할<br>
+> 　　　　　(값이 변경될 수 있다는 것을 염두해두기 위해 let으로 선언하는 것이 적절)<br>
+> ```js
+> const h1 = document.querySelector("div.hello:first-child h1");
+> 
+> function handleTitleClick() {
+>   const currentColor = h1.style.color;  // currentColor : 현재 h1의 color값
+>   let newColor;                         // 값이 변경될 수 있는 newColor는 let으로 선언
+>   if ( currentColor === "blue") {       // 만약 h1이 파란색이라면
+>     newColor = "tomato";
+>   } else {                              // 그렇지 않다면(파란색이 아니라면)
+>     newColor = "blue";
+>   }
+>   h1.style.color = newColor;            // h1에 newColor 대입
+> }
+> 
+> h1.addEventListener("click", handleTitleClick);
+> ```
+> (참고) 함수 내에서 선언된 변수는 함수 밖에서 존재하지않음, 그렇기 때문에 const CurrentColor로<br>
+> 　　　변수 선언을 하더라도, 함수가 호출될 때 마다 새로운 값을 받을 수 있음<br>
+> classList : class를 목록으로 작업할 수 있게끔 허용해줌<br>
+> 　 　　　js에서 건드리는건 HTML element가 가지고있는 또하나의 요소 사용하는 것<br>
+> 　　 　　= element의 class내용물을 조작하는 것을 허용한다는 뜻<br>
+> className : 이전 class를 상관하지않고 모든걸 교체함<br>
+> contains : 우리가 명시한 class가 HTML element의 class에 포함되어 있는지 말해줌<br>
+> remove : 명시한 class name 제거<br>
+> add : 명시한 class name 추가<br>
+> **toggle** : 토큰이 존재하면 토큰 제거, 존재하지 않으면 토큰 추가(class name 존재유무 확인)
+---
+# 4 LOGIN
+### 
