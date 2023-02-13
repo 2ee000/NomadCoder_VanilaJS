@@ -392,4 +392,37 @@
 > **toggle** : 토큰이 존재하면 토큰 제거, 존재하지 않으면 토큰 추가(class name 존재유무 확인)
 ---
 # 4 LOGIN
-### 
+### length
+> string의 길이를 구함
+> ```js
+> string.length
+> ```
+
+### maxlength
+> 최대 n글자까지 입력할 수 있음
+> ```js
+> <input type="text" id="userId" maxlength="n"/>
+> ```
+
+### required
+> form data가 서버로 제출되기 전 반드시 채워져 있어야 하는 입력 필드 명시<br>
+> boolean 속성으로 명시하지 않으면 속성값이 자동으로 false값을 가지게 되며, 명시하면 자동으로 true값을 가짐<br>
+> required속성이 동작하는 요소의 type 속성값 : checkbox, date, emamil, file, number, password,<br>
+> 　　　　　　　　　　　　　　　　　　　　 pickers, radio, search, tel, text, url
+
+### form
+> 입력 후 클릭이 아닌 enter를 눌러도 form은 submit되기때문에 반드시 form안에 input을 넣어야 함<br>
+> ~~form안에 input을 쓰고 enter나 submit을 누르면 자동으로 제출됨(click이 필요없고 form을 submit하는것이 중요)
+> -> 브라우저가 새로고침하지않고 user정보를 저장~~
+
+### preventDefault
+> from을 submit했을 때 브라우저가 기본적으로 새로고침을 하는것을 막아줌<br>
+> 브라우저의 기본 동작을 막아줌(어떤 event의 기본행동이든지 발생되지 않도록 막음)<br>
+> EventListener함수의 '첫번째 argument'안에 있는 함수로 첫 argument는 지금 막 실행된 event들에 대한 정보를 갖고있음<br>
+> js는 기본적으로 argument를 담아서 함수를 호출하는데, 이 argument가 기본정보들을 제공하고있음
+> ```js
+> function onLoginSubmit(event) {
+>   event.preventDefault(); // event object는 기본적으로 preventDefault함수를 갖고있음
+>   console.log(event);
+> }
+> ```
