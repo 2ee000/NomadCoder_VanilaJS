@@ -426,3 +426,35 @@
 >   console.log(event);
 > }
 > ```
+
+### 변수 + string
+> "string" + 변수
+> ```js
+> "Hello" + username;
+> ```
+> 'string ${변수}`
+> ```js
+> `Hello ${username}`;
+> ```
+
+### add & remove
+> 추가 : classList.add.('classname');<br>
+> 삭제 : classList.remove.('classname');
+
+### local storage
+> 브라우저에 뭔가를 저장한 후 나중에 가져올 수 있음<br>
+> setItem : local storage에 정보 저장<br>
+> getItem : local storage에 저장된 정보를 불러옴<br>
+> removeItem : local storage에 저장된 정보를 불러옴
+> ```js
+> ex. localStorage.setItem("key", value);
+>     localStorage.getItem("key");
+>     localStorage.removeItem("key");
+> ```
+
+### 반복되는 string
+> 반복되는 string들은 대문자 변수로 저장<br>
+> -> 실수를 만들고싶지 않은 string이라는 사실을 기억하고 상기시키기 좋음
+---
+# 5 CLOCK
+###
