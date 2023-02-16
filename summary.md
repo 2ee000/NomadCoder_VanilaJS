@@ -457,4 +457,47 @@
 > -> 실수를 만들고싶지 않은 string이라는 사실을 기억하고 상기시키기 좋음
 ---
 # 5 CLOCK
-### 2023.02.15일x 16일에 더 
+### Interval
+> '매번' 일어나야 하는 무언가(n초마다, n시간마다, ...)
+
+### setInterval
+> 일정 시간 간격을 두고 함수 실행<br>
+> 두 개의 argument를 받음(첫번째: 실행하고자 하는 function, 두번째: 호출되는 function 간격milliseconds)
+> ```js
+> ex. setInterval(sayHello, 5000); // 5초마다 sayHello실행
+> ```
+
+### setTimeout
+> 일정 시간이 지난 후 함수 실행<br>
+> 두 개의 argument를 받음(첫번째: 호출하고자 하는 function, 두번째: 기다릴 시간milliseconds)
+> ```js
+> ex. setTimeout(sayHello, 5000); // 5초 후 sayHello실행
+> ```
+
+### Date(object)
+> getDate() : 날짜<br>
+> getDay() : 요일(일요일:0 ~ 토요일:6)<br>
+> getFullYear() : 년도<br>
+> getHours() : 시<br>
+> getMinutes() : 분<br>
+> getSeconds() : 초
+
+### padStart(), padEnd()
+> string에 쓸 수 있는 function으로 두개의 argument를 받음<br>
+> padStart() : 앞쪽에 padding을 줌
+> ```js
+> "string".padStart(number, "추가할 string"); // number이하 자리수라면 앞에 string추가
+> ex. "1".padStart(2, "0"); // 1은 한자리수이므로 앞에 0을 추가해 01이 출력됨
+> ```
+> padEnd() : 뒷쪽에 padding을 줌
+> ```js
+> "string".padEnd(number, "추가할 string"); // number이하 자리수라면 뒤에 string추가
+> ex. "1".padEnd(2, "0"); // 1은 한자리수이므로 뒤에 0을 추가해 10이 출력됨
+> ```
+
+### String(), Number()
+> String() : 문자형 데이터로 변경<br>
+> Number() : 숫자형 데이터로 변경
+---
+# 6 QUOTES AND BACKGROUND
+### 
