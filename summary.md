@@ -521,3 +521,6 @@
 
 ### appendChild()
 > js에서 body에 html을 추가하는 방법
+---
+# 7 TO DO LIST
+###
