@@ -500,4 +500,24 @@
 > Number() : 숫자형 데이터로 변경
 ---
 # 6 QUOTES AND BACKGROUND
-### 
+### Math(function)
+> random() : 0부터 1사이의 랜덤한 숫자 제공(float)
+> ```js
+> Math.random();
+> Math.random() * 10; // random에 10을 곱해 0에서 1사이의 숫자를 얻을 수 있음
+> ```
+> round() : 반올림
+> ```js
+> Math.round(1.7); → 2
+> ```
+> ceil() : 올림
+> ```js
+> Math.ceil(1.2); → 2
+> ```
+> floor() : 내림
+> ```js
+> Math.floor(1.8); → 1
+> ```
+
+### appendChild()
+> js에서 body에 html을 추가하는 방법
