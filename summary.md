@@ -520,7 +520,11 @@
 > ```
 
 ### appendChild()
-> js에서 body에 html을 추가하는 방법
+> js에서 body에 html을 추가하는 방법?<br>
+> ```js
+> ex. parent.appendChild(child);
+> // parent의 자식에 child를 넣어줌
+> ```
 ---
 # 7 TO DO LIST
 ###
